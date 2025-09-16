@@ -107,12 +107,30 @@
 > 💡 **Takeaway:** Research supports the feasibility of token economies, AI-driven pairing, peer learning, and hybrid models: all core to **Skill Swap**.
 
 
+## 📈 Success Metrics
+
+- **Active Users (Monthly)**
+- **Skill Exchanges Completed**
+- **Verified Micro-certificates Issued**
+- **Token Economy Activity (Earned & Spent)**
+- **User Satisfaction Ratings**
+- **Rural vs Urban User Adoption**
+- **AI Skill Match Accuracy**
+
 
 
 
 
 ## 🚀 Getting Started
 * Soon. 
+
+## 📁 Project Architecture
+* Soon.
+
+## 📱 Screenshots
+* Soon.
+
+
 
 
 
