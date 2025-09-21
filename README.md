@@ -11,7 +11,7 @@
 
 ## 💡 Proposed Solution
 
-<h3 align="center">Skill Swap – AI-Powered Peer-2-Peer Learning</h3>
+<h3 align="center">Skill Sangam – AI-Powered Peer-2-Peer Learning</h3>
 
 > <p align="center">🚨 <strong>"An AI-powered peer-to-peer learning economy that verifies, incentivizes, and gamifies skill exchange, aligned with India’s skill development mission."</strong></p>
 
@@ -100,7 +100,7 @@
 - **Hybrid/Offline Models:** Feasible in low-resource settings  
   *[P4L – Arxiv 2023](https://arxiv.org/abs/2302.13438)*  
 
-> 💡 **Takeaway:** Research supports the feasibility of token economies, AI-driven pairing, peer learning, and hybrid models: all core to **Skill Swap**.
+> 💡 **Takeaway:** Research supports the feasibility of token economies, AI-driven pairing, peer learning, and hybrid models: all core to **Skill Sangam**.
 
 
 ## 📈 Success Metrics
