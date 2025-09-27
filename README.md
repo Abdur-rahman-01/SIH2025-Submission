@@ -204,7 +204,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ---
 
-## 🏷 Tags
+## 🏷 Tags  
 
-`#WebApp`
+`#WebApp` `#SocialNetwork` `#PeerToPeer` `#Gamification` `#Certification` `#HybridModel` `#SmartEducation` `#SkillShare` `#SkillsAssessment` `#DigitalLearning` `#GamifiedLearning` `#TokenEconomy` `#AIMatching` `#SmartIndiaHackathon` `#StudentInnovation` `#PeerToPeerLearning` `#SkillExchange` `#SIH2025` `#SmartIndiaHackathon2025` `#SIH25140` `#SkillSangam`
 
