@@ -1,14 +1,25 @@
-import Image from "next/image";
+import CTA from "../components/sections/cta/default";
+import FAQ from "../components/sections/faq/default";
+import Footer from "../components/sections/footer/default";
+import Hero from "../components/sections/hero/default";
+import Items from "../components/sections/items/default";
+import Logos from "../components/sections/logos/default";
+import Navbar from "../components/sections/navbar/default";
+import Pricing from "../components/sections/pricing/default";
+import Stats from "../components/sections/stats/default";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <h1 className="text-3xl">...</h1>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        
-      </footer>
-    </div>
+    <main className="min-h-screen w-full overflow-hidden bg-background text-foreground">
+      <Navbar />
+      <Hero />
+      {/* <Logos /> */}
+      <Items />
+      {/* <Stats /> */}
+      {/* <Pricing /> */}
+      <FAQ />
+      <CTA />
+      <Footer />
+    </main>
   );
 }
