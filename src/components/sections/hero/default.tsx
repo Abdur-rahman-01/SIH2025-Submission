@@ -44,7 +44,7 @@ export default function Hero({
   ),
   buttons = [
     {
-      href: '/onboarding',
+      href: '/student/onboarding',
       text: "Get Started",
       variant: "default",
     },
