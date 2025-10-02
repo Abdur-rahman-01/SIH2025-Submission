@@ -1,8 +1,20 @@
 import Footer from "@/components/sections/footer/default";
 import Navbar from "@/components/sections/navbar/default";
 
+import Head from "next/head"
+
+
 export default async function Contact() {
   return (
+    <>
+      <Head>
+        <title>Contact Us | ShikshaDisha</title>
+        <meta
+          name="description"
+          content="Discover your future-ready career journey with personalized training recommendations."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
     <main className="min-h-screen w-full overflow-hidden bg-background text-foreground">
       <Navbar />
 
@@ -83,5 +95,6 @@ export default async function Contact() {
 
       <Footer />
     </main>
+    </>
   );
 }

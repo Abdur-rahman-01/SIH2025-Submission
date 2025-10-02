@@ -42,7 +42,7 @@ interface NavbarProps {
 export default function Navbar({
   logo = <LaunchUI />,
   name = "ShikshaDisha",
-  homeUrl = '/student/onboarding',
+  homeUrl = '/',
   mobileLinks = [
     { text: "Getting Started", href: '/student/onboarding' },
   ],
