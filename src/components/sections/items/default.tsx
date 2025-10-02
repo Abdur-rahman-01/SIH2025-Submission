@@ -83,14 +83,25 @@ export default function Items({
         {items !== false && items.length > 0 && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {items.map((item, index) => (
-              <Item key={index} className="p-4">
-                <ItemTitle className="flex items-center gap-4 text-xl font-semibold">
-                  <ItemIcon>{item.icon}</ItemIcon>
-                  {item.title}
-                </ItemTitle>
-                <ItemDescription className="mt-2 text-gray-500 text-base">
-                  {item.description}
-                </ItemDescription>
+              <Item
+                key={index}
+                className="p-6 relative overflow-hidden rounded-lg border border-border bg-background transition-all duration-300 hover:shadow-md hover:shadow-primary/10 group"
+              >
+                {/* Beam effect */}
+                <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-transparent via-primary/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 ease-out" />
+
+                {/* Content */}
+                <div className="relative z-10">
+                  <ItemTitle className="flex items-center gap-4 text-xl font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
+                    <ItemIcon className="group-hover:scale-110 transition-transform duration-300">
+                      {item.icon}
+                    </ItemIcon>
+                    {item.title}
+                  </ItemTitle>
+                  <ItemDescription className="mt-2 text-muted-foreground text-base group-hover:text-foreground/80 transition-colors duration-300">
+                    {item.description}
+                  </ItemDescription>
+                </div>
               </Item>
             ))}
           </div>

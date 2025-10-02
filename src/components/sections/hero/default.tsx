@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
 import Github from "../../logos/github";
-import { Badge } from "../../ui/badge";
+import { BorderBeam } from "@/components/ui/border-beam" 
 import { Button, type ButtonProps } from "../../ui/button";
 import Glow from "../../ui/glow";
 import { Mockup, MockupFrame } from "../../ui/mockup";
@@ -104,7 +104,9 @@ export default function Hero({
                 >
                   {mockup}
                 </Mockup>
+                <BorderBeam duration={6} size={200} borderWidth={5} colorFrom={'var(--primary)'} colorTo={'var(--secondary)'} />
               </MockupFrame>
+              
               <Glow
                 variant="top"
                 className="absolute top-0 left-0 h-full w-full translate-y-4 opacity-80 transition-all duration-500 ease-in-out group-hover:translate-y-[-8px] group-hover:opacity-100"
