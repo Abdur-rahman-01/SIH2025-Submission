@@ -42,7 +42,7 @@
 - **Database:** MongoDB/PostgreSQL
 - **AI/ML:** TensorFlow, PyTorch for predictive analytics
 - **APIs Integration:** NSQF database, Labour market intelligence APIs
-- **Hosting:** AWS/Azure cloud infrastructure
+- **Hosting:** Vercel/Firebase/AWS/GCP cloud infrastructure
 
 ## 📊 Feasibility and Viability
 
@@ -75,13 +75,13 @@
 
 ### Research Validation
 - **AI Personalization:** AI creates customized learning paths that boost engagement and results  
-  *[Frontiers in Education 2024 | Emerald AI in Education]*
+  *[[Frontiers in Education 2024](https://www.frontiersin.org/articles/10.3389/feduc.2024.1424386/full) | [Emerald AI in Education](https://www.emerald.com/insight/content/doi/10.1108/XJM-03-2022-0012/full/html)]*
 - **Vocational Skilling & NSQF:** NSQF links vocational training with industry and job market demands  
-  *[ICRIER NSQF Note | IJFMR NSQF Implementation]*
+  *[[ICRIER NSQF Note](https://icrier.org/pdf/ES/The_National_Skills_Qualification_Framework_in_India.pdf) | [IJFMR NSQF Implementation](https://www.ijfmr.com/papers/2024/6/34118.pdf)]*
 - **Labour Market Intelligence:** Real-time labour data integration is vital for future-ready skills  
-  *[India Employer Forum 2025 | Economic Times EdTech]*
+  *[[India Employer Forum 2025](https://indiaemployerforum.org/world-of-work/insights-from-teamlease-edtech-career-outlook-report-hy2-july-december-2025/) | [Economic Times EdTech](https://education.economictimes.indiatimes.com/news/higher-education/future-ready-india-how-edtech-can-develop-the-workforce/119411774)]*
 - **India EdTech Growth:** EdTech is a $10B+ market growing quickly with AI-powered, mobile-first solutions  
-  *[Market Research Future | HolonIQ Charts 2025]*
+  *[[Market Research Future](https://www.marketresearchfuture.com/reports/india-edtech-market-46222) | [HolonIQ Charts 2025](https://www.holoniq.com/edtech-in-10-charts)]*
 
 > 💡 **Takeaway:** Research validates the importance of AI-personalized learning, NSQF compliance and scalable secure design for India's skill ecosystem.
 
@@ -126,10 +126,10 @@
    npm run dev
    ```
 
-## 📁 Project Architecture
+## 📁 Project Architecture *
 * Soon.
 
-## 📱 Screenshots
+## 📱 Screenshots *
 <table> <tr> <td><strong>Landing Page</strong><br><br> <img width="1920" height="1031" alt="image" src="https://github.com/user-attachments/assets/0c859575-1ad2-4d52-964f-4c4da41104f3" /> </td> </tr> </table>
 
 
@@ -184,7 +184,7 @@
 
 ## ✨ Icon
 
-<img style="width:500px;" alt="ShikshaDishaFavicon" src="https://github.com/user-attachments/assets/0d6be6ca-2e51-46e9-bf24-a3bfcfdd1242" />
+<img style="width:250px;" alt="ShikshaDishaFavicon" src="https://github.com/user-attachments/assets/0d6be6ca-2e51-46e9-bf24-a3bfcfdd1242" />
 
 
 ## 🔰 Banner

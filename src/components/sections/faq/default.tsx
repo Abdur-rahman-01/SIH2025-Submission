@@ -111,7 +111,7 @@ export default function FAQ({
 }: FAQProps) {
   return (
     <Section className={className}>
-      <div className="max-w-container mx-auto flex flex-col items-center gap-8">
+      <div className="max-w-container mx-auto flex flex-col items-center gap-8 px-4">
         <h2 className="text-center text-3xl font-semibold sm:text-5xl">
           {title}
         </h2>

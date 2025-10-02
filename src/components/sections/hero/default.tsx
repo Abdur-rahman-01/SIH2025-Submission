@@ -93,7 +93,7 @@ export default function Hero({
             </div>
           )}
           {mockup !== false && (
-            <div className="relative w-full pt-12">
+            <div className="relative w-full pt-12 group">
               <MockupFrame
                 className="animate-appear opacity-0 delay-700"
                 size="small"
@@ -107,9 +107,8 @@ export default function Hero({
               </MockupFrame>
               <Glow
                 variant="top"
-                className="absolute top-0 left-0 h-full w-full translate-y-4 opacity-80 transition-all duration-500 ease-in-out group-hover:translate-y-[-8] group-hover:opacity-100"
+                className="absolute top-0 left-0 h-full w-full translate-y-4 opacity-80 transition-all duration-500 ease-in-out group-hover:translate-y-[-8px] group-hover:opacity-100"
               />
-
             </div>
           )}
         </div>

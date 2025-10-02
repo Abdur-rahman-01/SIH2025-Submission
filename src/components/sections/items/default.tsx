@@ -1,12 +1,12 @@
 import {
-  BlocksIcon,
+  ClockIcon,
   EclipseIcon,
   FastForwardIcon,
   LanguagesIcon,
-  MonitorSmartphoneIcon,
+  SearchIcon,
   RocketIcon,
   ScanFaceIcon,
-  SquarePenIcon,
+  PointerIcon,
 } from "lucide-react";
 import { ReactNode } from "react";
 
@@ -36,7 +36,7 @@ export default function Items({
     {
       title: "Career Explorer",
       description: "Discover future-ready job roles and the skills needed to reach them",
-      icon: <MonitorSmartphoneIcon className="w-10 h-10" />,
+      icon: <SearchIcon className="w-10 h-10" />,
     },
     {
       title: "Skill Gap Analyzer",
@@ -47,7 +47,7 @@ export default function Items({
     {
       title: "Real-time Updates",
       description: "Recommendations adapt continuously based on learner progress and labor market trends",
-      icon: <BlocksIcon className="w-10 h-10" />,
+      icon: <ClockIcon className="w-10 h-10" />,
     },
     {
       title: "NSQF-aligned Programs",
@@ -57,19 +57,19 @@ export default function Items({
     {
       title: "Inclusive & Multilingual",
       description: "Supports diverse learners with multiple language options and accessibility-first design",
-      icon: <RocketIcon className="w-10 h-10" />,
+      icon: <LanguagesIcon className="w-10 h-10" />,
     },
     {
       title: "Interactive Dashboard",
       description:
         "Track progress, milestones, and learning achievements in one intuitive interface",
-      icon: <LanguagesIcon className="w-10 h-10" />,
+      icon: <PointerIcon className="w-10 h-10" />,
     },
     {
       title: "Scalable & Secure",
       description:
         "Capable of serving millions of learners while ensuring full data privacy and compliance",
-      icon: <SquarePenIcon className="w-10 h-10" />,
+      icon: <RocketIcon className="w-10 h-10" />,
     },
   ],
   className,

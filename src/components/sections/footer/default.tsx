@@ -51,6 +51,7 @@ export default function FooterSection({
     {
       title: "Application",
       links: [
+        { text: "Home", href: "/" },
         { text: "About", href: "/about" },
         { text: "Contact Us", href: "/contact" },
       ],
@@ -64,7 +65,7 @@ export default function FooterSection({
       ],
     },
   ],
-  copyright = "© 2025 Shiksha Disha. All rights reserved",
+  copyright = "© 2025 ShikshaDisha. All rights reserved",
   policies = [
     { text: "Privacy Policy", href: siteConfig.url },
     { text: "Terms of Service", href: siteConfig.url },
@@ -104,7 +105,7 @@ export default function FooterSection({
             ))}
           </FooterContent>
 
-          <FooterBottom className="flex flex-col sm:flex-row justify-center items-center mt-6 gap-4">
+          <FooterBottom className="flex flex-row justify-center items-center mt-6 gap-4">
             <div className="flex items-center justify-left w-full text-xs text-muted-foreground">
               {copyright}
             </div>
