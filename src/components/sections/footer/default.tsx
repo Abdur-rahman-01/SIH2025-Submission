@@ -53,7 +53,7 @@ export default function FooterSection({
       links: [
         { text: "Home", href: "/" },
         { text: "About", href: "/about" },
-        { text: "Contact Us", href: "/contact" },
+        { text: "Our Team", href: "/team" },
       ],
     },
     {
@@ -63,6 +63,14 @@ export default function FooterSection({
         { text: "Privacy Policy", href: "/privacy" },
         { text: "Cookie Policy", href: "/cookies" },
       ],
+      
+    },
+    {
+      title: "Support",
+      links: [
+        { text: "Contact Us", href: "/contact" },
+      ],
+      
     },
   ],
   copyright = "© 2025 ShikshaDisha. All rights reserved",

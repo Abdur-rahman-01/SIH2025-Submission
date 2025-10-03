@@ -50,7 +50,7 @@ export default function Hero({
     },
     {
       href: siteConfig.links.github,
-      text: "Github",
+      text: "GitHub",
       variant: "glow",
       icon: <Github className="mr-2 size-4" />,
     },

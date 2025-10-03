@@ -1,7 +1,7 @@
-## 🤝 Contributing
+# 🤝 Contributing
 
 
-## 👥 Our Smart India Hackathon 2025 Team (DevBandits)
+<h2 align="center">👥 Our Smart India Hackathon 2025 Team (DevBandits)</h2>
 
 <div align="center">
 

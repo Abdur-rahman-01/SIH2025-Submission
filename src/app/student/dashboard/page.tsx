@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
@@ -81,6 +82,10 @@ export default function Dashboard() {
         { name: "Problem Solving", level: 60, target: 90 },
         { name: "Communication", level: 70, target: 85 }
     ];
+
+    useEffect(() => {
+        document.title = "Dashboard | ShikshaDisha";
+    }, []);
 
     return (
         <div className="min-h-screen bg-background p-18">
@@ -298,11 +303,11 @@ export default function Dashboard() {
                                         {milestones.map((milestone, index) => (
                                             <div key={milestone.id} className="flex items-start gap-3">
                                                 <div className={`flex flex-col items-center ${milestone.status === "completed" ? "text-primary" :
-                                                        milestone.status === "current" ? "text-green-500" : "text-muted-foreground"
+                                                    milestone.status === "current" ? "text-green-500" : "text-muted-foreground"
                                                     }`}>
                                                     <div className={`w-8 h-8 rounded-full flex items-center justify-center border-2 ${milestone.status === "completed" ? "bg-primary border-primary text-primary-foreground" :
-                                                            milestone.status === "current" ? "bg-green-500 border-green-500 text-white" :
-                                                                "bg-muted border-muted text-muted-foreground"
+                                                        milestone.status === "current" ? "bg-green-500 border-green-500 text-white" :
+                                                            "bg-muted border-muted text-muted-foreground"
                                                         }`}>
                                                         {milestone.status === "completed" ? "✓" : index + 1}
                                                     </div>

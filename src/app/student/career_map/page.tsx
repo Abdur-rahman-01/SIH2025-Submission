@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -173,6 +174,10 @@ export default function CareerMap() {
       default: return "Not Started";
     }
   };
+
+  useEffect(() => {
+          document.title = "My Career Map | ShikshaDisha";
+      }, []);
 
   return (
     <div className="min-h-screen bg-background p-4 pt-18 pb-24">

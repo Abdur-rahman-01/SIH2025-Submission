@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -13,6 +14,7 @@ import { Progress } from "@/components/ui/progress";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { ChevronLeft, ChevronRight, User, BookOpen, Target, Settings, Clock, Star, Send, LogOut } from "lucide-react";
+
 
 const steps = [
     { name: "Personal Info", icon: User },
@@ -62,6 +64,10 @@ export default function OnboardingForm() {
     };
 
     const progress = (step / (steps.length - 1)) * 100;
+
+    useEffect(() => {
+              document.title = "Onboarding Questionaire | ShikshaDisha";
+          }, []);
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-background p-4 relative">

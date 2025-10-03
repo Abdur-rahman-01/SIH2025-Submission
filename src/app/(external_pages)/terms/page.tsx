@@ -1,20 +1,16 @@
 
 import Footer from "@/components/sections/footer/default";
 import Navbar from "@/components/sections/navbar/default";
+import Glow from "@/components/ui/glow";
 
-import Head from "next/head"
+export const metadata = {
+  title: "Terms of Service | ShikshaDisha",
+  description: "Read the Terms of Service to understand the rules and guidelines for using ShikshaDisha.",
+};
 
 export default async function Terms() {
   return (
     <>
-      <Head>
-        <title>Terms of Service | ShikshaDisha</title>
-        <meta
-          name="description"
-          content="Discover your future-ready career journey with personalized training recommendations."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
       <main className="min-h-screen w-full overflow-hidden bg-background text-foreground">
         <Navbar />
 
@@ -103,6 +99,8 @@ export default async function Terms() {
             </p>
           </div>
         </section>
+
+
 
         <Footer />
       </main>
