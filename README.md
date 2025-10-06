@@ -42,14 +42,7 @@
 - **Gamified Engagement** – Duels and streaks
 - **Cross-Sector Mobility** – AI identifies transferable skills enabling seamless career transitions
 
-### 🛠️ Tech Stack
 
-- **Frontend:** React, Next.js, Typescript, TailwindCSS, shadcn/ui
-- **Backend:** Node.js/Python with AI microservices
-- **Database:** MongoDB/PostgreSQL
-- **AI/ML:** TensorFlow, PyTorch for predictive analytics
-- **APIs Integration:** NSQF database, Labour market intelligence APIs
-- **Hosting:** Vercel/Firebase/AWS/GCP cloud infrastructure
 
 ## 📊 Feasibility and Viability
 
@@ -110,29 +103,23 @@
 - **Educational Institutions:** NSQF-integrated curriculum planning support
 - **Government Schemes:** Enhanced effectiveness of Skill India missions through AI optimization
 
-
+---
 
 ## ⚙️ Platforms
 
-<table border="1" cellpadding="10" cellspacing="0">
-  <thead>
-    <tr>
-      <th>Platform</th>
-      <th>Supported?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Web (any browser with JS functionality) + Fully Responsive</td>
-      <td>✅</td>
-    </tr>
-    <tr>
-      <td>Android (non-natively through WebView)</td>
-      <td>✅</td>
-    </tr>
-  </tbody>
-</table>
+| Platform                                                       | Supported? |
+| --------------------------------------------------------------- | ----------- |
+| Web (any browser with JS functionality) + Fully Responsive       | ✅          |
+| [Android](native/) (non-natively through WebView)                | ✅          |
 
+## 🛠️ Tech Stack
+
+- **Frontend:** React, Next.js, Typescript, TailwindCSS, shadcn/ui
+- **Backend:** Node.js/Python with AI microservices
+- **Database:** MongoDB/PostgreSQL
+- **AI/ML:** TensorFlow, PyTorch for predictive analytics
+- **APIs Integration:** NSQF database, Labour market intelligence APIs
+- **Hosting:** Vercel/Firebase/AWS/GCP cloud infrastructure
 
 
 ## 🚀 Getting Started
