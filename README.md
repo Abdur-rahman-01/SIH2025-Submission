@@ -1,14 +1,21 @@
-<h1 align="center">ShikshaDisha – AI-Powered NSQF-Integrated Learning Ecosystem</h1>
+<h1 align="center">🎓 ShikshaDisha – AI-Powered NSQF-Integrated Learning Ecosystem</h1>
 
 > <p align="center">🚨 <strong>"Design and development of an AI-powered learning path generator, Vocational Pathway Navigator with Dynamic Career Intelligence and NSQF-Integrated Learning Ecosystem"</strong></p>
 
-<p align="center">
-  <a href="https://shiksha-disha.vercel.app/" target="_blank">
-    <img  style="width:350px;" src="https://img.shields.io/badge/🚀_Access_the_Prototype_Here-Live-brightgreen?style=for-the-badge&labelColor=8000FF" alt="Access the Prototype Here"  />
-  </a>
-</p>
+<div align="center">
 
-## 🍊 Context: Prototype for Smart India Hackathon 2025
+<a href="https://shiksha-disha.vercel.app/" target="_blank">
+    <img  style="width:350px;" src="https://img.shields.io/badge/🚀_Access_the_Prototype_Here-Live-brightgreen?style=for-the-badge&labelColor=8000FF" alt="Access the Prototype Here"  />
+</a>
+
+![Phase](https://img.shields.io/badge/🛠️%20Phase-In%20Development-blue?style=for-the-badge)
+![Platforms](https://img.shields.io/badge/🌐%20Platforms-Web%20%7C%20Android*-28a745?style=for-the-badge)
+
+</div>
+
+## 🍊 Context
+
+### 🏆 Prototype for Smart India Hackathon 2025
 
 - **Problem Statement ID:** SIH25199  
 - **Problem Statement Title:** AI-Powered Personalized Learning Path Generator 
@@ -167,7 +174,7 @@
 
 
 
-## 📊 **Project Stats**
+## 📊 **Repo Stats**
 
 <div align="center">
   
