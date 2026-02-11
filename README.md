@@ -13,13 +13,13 @@
 
 </div>
 
-## 🍊 Context
+## 🔹 Context
 
-### 🏆 Prototype for Smart India Hackathon 2025
+### 🏆 Prototype for SUDHEE CBIT Hackathon 2026
 
-- **Problem Statement ID:** SIH25199  
-- **Problem Statement Title:** AI-Powered Personalized Learning Path Generator 
-- **Theme:** Smart Education  
+- **Problem Statement ID:** 1.12
+- **Problem Statement Title:** Personalized Course Curator Based on Learner’s Learning Style & Preferences
+- **Theme:** Intelligent Systems & AI Innovation
 - **Category:** Software
 
 
@@ -156,18 +156,17 @@
 
 
 
-## 👥 Our Smart India Hackathon 2025 Team (DevBandits)
+## 👥 Our SUDHEE CBIT Hackathon 2026 Team (DevBandits)
 
 <div align="center">
 
 |  #  |     Team Member      |              Role              | GitHub Profile |
 | :-: | :------------------: | :----------------------------: | :-----------------------------------------------------------------------------------------------------------------------------: |
-|  1  | **Mohammed Abdul Mugees** | 💼 Solutions Engineer               | [🔗 mug3es](https://github.com/mug3es) |
-|  2  | **Safaa Mujahid Khan**    | 🎨 UI/UX Designer                   | [🔗 SafaaMujahid05](https://github.com/SafaaMujahid05) |
-|  3  | **Fareed Ahmed Owais**    | 🎯 Team Lead                        | [🔗 FareedAhmedOwais](https://github.com/FareedAhmedOwais) |
-|  4  | **Mohammed Saad Uddin**   | 🚀 Full-stack + AI/ML Developer     | [🔗 saad2134](https://github.com/saad2134) |
-|  5  | **Mohammed Abdul Rahman** | 🖼️ Front-end Developer             | [🔗 Abdul-Rahman26](https://github.com/Abdul-Rahman26) |
-|  6  | **Abdur Rahman Qasim**    | 🔎 Research Engineer                | [🔗 Abdur-rahman-01](https://github.com/Abdur-rahman-01) |
+|  1  | **Abdur Rahman Qasim**    | 🎯 Team Lead                 | [🔗 Abdur-rahman-01](https://github.com/Abdur-rahman-01) |
+|  2  | **Fareed Ahmed Owais**    | 🔎 Research Engineer    | [🔗 FareedAhmedOwais](https://github.com/FareedAhmedOwais) |
+|  3  | **Mohammed Saad Uddin**   | 🚀 Full-stack + AI/ML Developer     | [🔗 saad2134](https://github.com/saad2134) |
+|  4  | **Mohammed Abdul Rahman** | 🖼️ Front-end Developer             | [🔗 Abdul-Rahman26](https://github.com/Abdul-Rahman26) |
+
 
 </div>
 
@@ -178,27 +177,27 @@
 
 <div align="center">
   
-![Repo Size](https://img.shields.io/github/repo-size/saad2134/sih2025)
-![Last Commit](https://img.shields.io/github/last-commit/saad2134/sih2025)
-![Open Issues](https://img.shields.io/github/issues/saad2134/sih2025)
-![Open PRs](https://img.shields.io/github/issues-pr/saad2134/sih2025)
-![License](https://img.shields.io/github/license/saad2134/sih2025)
-![Forks](https://img.shields.io/github/forks/saad2134/sih2025?style=social)
-![Stars](https://img.shields.io/github/stars/saad2134/sih2025?style=social)
-![Watchers](https://img.shields.io/github/watchers/saad2134/sih2025?style=social)
-![Contributors](https://img.shields.io/github/contributors/saad2134/sih2025)
-![Languages](https://img.shields.io/github/languages/count/saad2134/sih2025)
-![Top Language](https://img.shields.io/github/languages/top/saad2134/sih2025)
+![Repo Size](https://img.shields.io/github/repo-size/saad2134/shiksha-disha)
+![Last Commit](https://img.shields.io/github/last-commit/saad2134/shiksha-disha)
+![Open Issues](https://img.shields.io/github/issues/saad2134/shiksha-disha)
+![Open PRs](https://img.shields.io/github/issues-pr/saad2134/shiksha-disha)
+![License](https://img.shields.io/github/license/saad2134/shiksha-disha)
+![Forks](https://img.shields.io/github/forks/saad2134/shiksha-disha?style=social)
+![Stars](https://img.shields.io/github/stars/saad2134/shiksha-disha?style=social)
+![Watchers](https://img.shields.io/github/watchers/saad2134/shiksha-disha?style=social)
+![Contributors](https://img.shields.io/github/contributors/saad2134/shiksha-disha)
+![Languages](https://img.shields.io/github/languages/count/saad2134/shiksha-disha)
+![Top Language](https://img.shields.io/github/languages/top/saad2134/shiksha-disha)
 
 </div>
 
 ## ⭐ Star History
 
-<a href="https://www.star-history.com/#saad2134/sih2025&Date">
+<a href="https://www.star-history.com/#saad2134/shiksha-disha&Date">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=saad2134/sih2025&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=saad2134/sih2025&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=saad2134/sih2025&type=Date" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=saad2134/shiksha-disha&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=saad2134/shiksha-disha&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=saad2134/shiksha-disha&type=Date" />
  </picture>
 </a>
 
@@ -227,12 +226,12 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 ---
 
 ## ✍️ Endnote
-<p align="center">Developed with 💖 for the Smart India Hackathon 2025, with heartfelt thanks to SIH for the opportunity to build and innovate.</p>
+<p align="center">Developed with 💖 for the SUDHEE CBIT Hackathon 2026, with heartfelt thanks to CBIT for the opportunity to build and innovate.</p>
 
 ---
 
 ## 🏷 Tags  
 
-`#WebApp` `#SmartEducation` `#AIinEducation` `#PersonalizedLearning` `#SkillPathways` `#CareerGuidance` `#NSQFIntegration` `#VocationalEducation` `#AIPathGenerator` `#DigitalLearning` `#AdaptiveLearning` `#GamifiedLearning` `#TokenEconomy` `#AIMatching` `#SkillNavigator` `#FutureSkills` `#EdTechIndia` `#SkillForecasting` `#CareerIntelligence` `#MultilingualAI` `#SkillSangam` `#SIH2025` `#SmartIndiaHackathon2025` `#SIH25199`
+`#WebApp` `#SmartEducation` `#AIinEducation` `#PersonalizedLearning` `#SkillPathways` `#CareerGuidance` `#NSQFIntegration` `#VocationalEducation` `#AIPathGenerator` `#DigitalLearning` `#AdaptiveLearning` `#GamifiedLearning` `#TokenEconomy` `#AIMatching` `#SkillNavigator` `#FutureSkills` `#EdTechIndia` `#SkillForecasting` `#CareerIntelligence` `#MultilingualAI` `#SUDHEE2026` `#CBITHackathonSUDHEE2026` `#PS1.12`
 
 

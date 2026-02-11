@@ -8,7 +8,7 @@ export const siteConfig = {
     "Your personalized roadmap to future-ready skills.",
   links: {
     twitter: "",
-    github: "https://github.com/saad2134/sih2025",
+    github: "https://github.com/saad2134/shiksha-disha",
     email: "mailto:reach.saad@outlook.com",
   },
   pricing: {
