@@ -48,7 +48,7 @@ export default function AuthPage() {
 
   return (
     <div className="min-h-screen flex">
-      <div className="w-[60%] min-h-screen relative hidden lg:block">
+      <div className="w-[60%] min-h-screen relative hidden lg:block" style={{ userSelect: 'none' }}>
         <div className="absolute inset-0">
           <Silk color="#9482e7" speed={8} />
         </div>
