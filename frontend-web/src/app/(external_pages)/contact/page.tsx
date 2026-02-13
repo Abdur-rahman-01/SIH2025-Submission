@@ -13,7 +13,7 @@ export default async function Contact() {
   return (
     <>
 
-      <main className="min-h-screen w-full overflow-hidden bg-background text-foreground">
+      <main className="min-h-screen w-full overflow-hidden bg-gradient-to-r from-primary/5 via-transparent to-primary/5 text-foreground">
         <Navbar />
 
         <section className="mx-auto max-w-4xl px-12 py-12 pt-32 md:pt-32 sm:gap-48 pb-40">
