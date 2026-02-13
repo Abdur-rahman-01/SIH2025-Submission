@@ -180,21 +180,21 @@ export default function CareerMap() {
       }, []);
 
   return (
-    <div className="min-h-screen bg-background p-4 pt-18 pb-24">
+    <div className="min-h-screen bg-background px-4 sm:px-6 pt-24 sm:pt-28 pb-24">
       {/* Header */}
       <div className="max-w-6xl mx-auto">
-        <div className="flex justify-between items-center mb-8">
-          <div className="flex items-center gap-4">
-            <Button variant="outline" onClick={handleBack} className="flex items-center gap-2">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6 sm:mb-8">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+            <Button variant="outline" onClick={handleBack} className="flex items-center justify-center gap-2 w-fit">
               <ChevronLeft size={16} />
               Back to Dashboard
             </Button>
             <div>
-              <h1 className="text-3xl font-bold text-foreground">Career Journey Map</h1>
-              <p className="text-muted-foreground">Your personalized path to becoming a {careerPath.goal}</p>
+              <h1 className="text-2xl sm:text-3xl font-bold text-foreground">Career Journey Map</h1>
+              <p className="text-sm sm:text-base text-muted-foreground">Your personalized path to becoming a {careerPath.goal}</p>
             </div>
           </div>
-          <Button variant="outline" onClick={handleLogout} className="flex items-center gap-2">
+          <Button variant="outline" onClick={handleLogout} className="flex items-center justify-center gap-2 w-fit self-start sm:self-auto">
             <LogOut size={16} />
             Logout
           </Button>
@@ -208,20 +208,20 @@ export default function CareerMap() {
           className="mb-8"
         >
           <Card className="bg-primary/5 border-primary/20">
-            <CardContent className="p-6">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-4">
-                  <div className="p-3 bg-primary/10 rounded-lg">
-                    <Target className="text-primary" size={24} />
+            <CardContent className="p-4 sm:p-6">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <div className="flex items-start sm:items-center gap-3 sm:gap-4">
+                  <div className="p-2 sm:p-3 bg-primary/10 rounded-lg shrink-0">
+                    <Target className="text-primary" size={22} />
                   </div>
-                  <div>
-                    <h2 className="text-xl font-semibold">Your Path to {careerPath.goal}</h2>
-                    <p className="text-muted-foreground">
+                  <div className="min-w-0">
+                    <h2 className="text-lg sm:text-xl font-semibold">Your Path to {careerPath.goal}</h2>
+                    <p className="text-sm text-muted-foreground">
                       Estimated duration: {careerPath.duration} • Level: {careerPath.level}
                     </p>
                   </div>
                 </div>
-                <Badge variant="secondary" className="text-lg px-4 py-2">
+                <Badge variant="secondary" className="text-base sm:text-lg px-3 sm:px-4 py-1.5 sm:py-2 w-fit">
                   {careerPath.match}% Path Match
                 </Badge>
               </div>
@@ -259,18 +259,18 @@ export default function CareerMap() {
                           transition={{ duration: 0.5, delay: 0.1 * index }}
                         >
                           <div 
-                            className={`flex gap-6 p-6 border rounded-lg cursor-pointer transition-all hover:shadow-md ${
+                            className={`flex flex-col sm:flex-row gap-4 sm:gap-6 p-4 sm:p-6 border rounded-lg cursor-pointer transition-all hover:shadow-md ${
                               selectedMilestone?.id === milestone.id ? 'ring-2 ring-primary' : ''
                             }`}
                             onClick={() => setSelectedMilestone(milestone)}
                           >
                             {/* Progress Connector */}
-                            <div className="flex flex-col items-center">
-                              <div className={`w-12 h-12 rounded-full flex items-center justify-center border-2 ${getStatusColor(milestone.status)}`}>
-                                <Icon size={20} />
+                            <div className="flex flex-row sm:flex-col items-center gap-4 sm:gap-0">
+                              <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center border-2 shrink-0 ${getStatusColor(milestone.status)}`}>
+                                <Icon size={18} className="sm:w-5 sm:h-5" />
                               </div>
                               {index < milestones.length - 1 && (
-                                <div className={`flex-1 w-0.5 mt-2 ${
+                                <div className={`hidden sm:block flex-1 w-0.5 mt-2 ${
                                   milestone.status === "completed" ? 'bg-green-500' : 
                                   milestone.status === "current" ? 'bg-blue-500' : 'bg-gray-300'
                                 }`} style={{ height: '80px' }} />
@@ -278,10 +278,10 @@ export default function CareerMap() {
                             </div>
 
                             {/* Content */}
-                            <div className="flex-1">
-                              <div className="flex items-start justify-between mb-3">
-                                <div>
-                                  <h3 className="text-lg font-semibold flex items-center gap-2">
+                            <div className="flex-1 min-w-0">
+                              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+                                <div className="min-w-0">
+                                  <h3 className="text-base sm:text-lg font-semibold flex flex-wrap items-center gap-2">
                                     {milestone.title}
                                     <Badge 
                                       variant={
@@ -294,7 +294,7 @@ export default function CareerMap() {
                                   </h3>
                                   <p className="text-muted-foreground mt-1">{milestone.description}</p>
                                 </div>
-                                <div className="text-right">
+                                <div className="text-left sm:text-right shrink-0">
                                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                                     <Clock size={14} />
                                     <span>{milestone.duration}</span>

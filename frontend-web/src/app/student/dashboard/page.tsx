@@ -88,20 +88,20 @@ export default function Dashboard() {
     }, []);
 
     return (
-        <div className="min-h-screen bg-background p-18">
+        <div className="min-h-screen bg-background pt-24 sm:pt-28 px-4 sm:px-6 lg:px-8 pb-12">
             {/* Header */}
             <div className="max-w-7xl mx-auto">
-                <div className="flex justify-between items-center mb-8">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6 sm:mb-8">
                     <div>
-                        <h1 className="text-3xl font-bold text-foreground">Career GPS</h1>
-                        <p className="text-muted-foreground">Your personalized learning journey</p>
+                        <h1 className="text-2xl sm:text-3xl font-bold text-foreground">Career GPS</h1>
+                        <p className="text-sm sm:text-base text-muted-foreground">Your personalized learning journey</p>
                     </div>
-                    <div className="flex items-center gap-4">
-                        <div className="text-right">
-                            <p className="font-medium text-foreground">Welcome back, {userData.name}!</p>
+                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+                        <div className="text-left sm:text-right">
+                            <p className="font-medium text-foreground truncate">Welcome back, {userData.name}!</p>
                             <p className="text-sm text-muted-foreground">{userData.careerGoal} Path</p>
                         </div>
-                        <Button variant="outline" onClick={handleLogout} className="flex items-center gap-2">
+                        <Button variant="outline" onClick={handleLogout} className="flex items-center justify-center gap-2 shrink-0">
                             <LogOut size={16} />
                             Logout
                         </Button>
@@ -134,22 +134,22 @@ export default function Dashboard() {
                                             <span className="text-sm font-medium">{userData.progress}%</span>
                                         </div>
                                         <Progress value={userData.progress} className="h-3" />
-                                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-                                            <div className="text-center p-4 border rounded-lg">
-                                                <div className="text-2xl font-bold text-primary">2</div>
-                                                <div className="text-sm text-muted-foreground">Courses Completed</div>
+                                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-6">
+                                            <div className="text-center p-3 sm:p-4 border rounded-lg">
+                                                <div className="text-xl sm:text-2xl font-bold text-primary">2</div>
+                                                <div className="text-xs sm:text-sm text-muted-foreground">Courses Completed</div>
                                             </div>
-                                            <div className="text-center p-4 border rounded-lg">
-                                                <div className="text-2xl font-bold text-primary">5</div>
-                                                <div className="text-sm text-muted-foreground">Skills Gained</div>
+                                            <div className="text-center p-3 sm:p-4 border rounded-lg">
+                                                <div className="text-xl sm:text-2xl font-bold text-primary">5</div>
+                                                <div className="text-xs sm:text-sm text-muted-foreground">Skills Gained</div>
                                             </div>
-                                            <div className="text-center p-4 border rounded-lg">
-                                                <div className="text-2xl font-bold text-primary">12</div>
-                                                <div className="text-sm text-muted-foreground">Weeks Remaining</div>
+                                            <div className="text-center p-3 sm:p-4 border rounded-lg">
+                                                <div className="text-xl sm:text-2xl font-bold text-primary">12</div>
+                                                <div className="text-xs sm:text-sm text-muted-foreground">Weeks Remaining</div>
                                             </div>
-                                            <div className="text-center p-4 border rounded-lg">
-                                                <div className="text-2xl font-bold text-primary">85%</div>
-                                                <div className="text-sm text-muted-foreground">Path Match</div>
+                                            <div className="text-center p-3 sm:p-4 border rounded-lg">
+                                                <div className="text-xl sm:text-2xl font-bold text-primary">85%</div>
+                                                <div className="text-xs sm:text-sm text-muted-foreground">Path Match</div>
                                             </div>
                                         </div>
 
@@ -191,22 +191,22 @@ export default function Dashboard() {
                                             <span className="text-sm font-medium">{userData.progress}%</span>
                                         </div>
                                         <Progress value={userData.progress} className="h-3" />
-                                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-                                            <div className="text-center p-4 border rounded-lg">
-                                                <div className="text-2xl font-bold text-primary">2</div>
-                                                <div className="text-sm text-muted-foreground">Courses Completed</div>
+                                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-6">
+                                            <div className="text-center p-3 sm:p-4 border rounded-lg">
+                                                <div className="text-xl sm:text-2xl font-bold text-primary">2</div>
+                                                <div className="text-xs sm:text-sm text-muted-foreground">Courses Completed</div>
                                             </div>
-                                            <div className="text-center p-4 border rounded-lg">
-                                                <div className="text-2xl font-bold text-primary">5</div>
-                                                <div className="text-sm text-muted-foreground">Skills Gained</div>
+                                            <div className="text-center p-3 sm:p-4 border rounded-lg">
+                                                <div className="text-xl sm:text-2xl font-bold text-primary">5</div>
+                                                <div className="text-xs sm:text-sm text-muted-foreground">Skills Gained</div>
                                             </div>
-                                            <div className="text-center p-4 border rounded-lg">
-                                                <div className="text-2xl font-bold text-primary">12</div>
-                                                <div className="text-sm text-muted-foreground">Weeks Remaining</div>
+                                            <div className="text-center p-3 sm:p-4 border rounded-lg">
+                                                <div className="text-xl sm:text-2xl font-bold text-primary">12</div>
+                                                <div className="text-xs sm:text-sm text-muted-foreground">Weeks Remaining</div>
                                             </div>
-                                            <div className="text-center p-4 border rounded-lg">
-                                                <div className="text-2xl font-bold text-primary">85%</div>
-                                                <div className="text-sm text-muted-foreground">Path Match</div>
+                                            <div className="text-center p-3 sm:p-4 border rounded-lg">
+                                                <div className="text-xl sm:text-2xl font-bold text-primary">85%</div>
+                                                <div className="text-xs sm:text-sm text-muted-foreground">Path Match</div>
                                             </div>
                                         </div>
                                     </div>

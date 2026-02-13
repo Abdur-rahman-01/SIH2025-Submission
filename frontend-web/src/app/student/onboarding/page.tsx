@@ -119,21 +119,21 @@ export default function OnboardingForm() {
           }, []);
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-background p-4 relative">
+        <div className="min-h-screen flex items-center justify-center bg-background p-4 sm:p-6 pt-24 sm:pt-28 pb-20 relative">
             {/* Top Right Buttons */}
-            <div className="absolute top-4 right-4 flex items-center gap-2">
+            <div className="absolute top-4 right-4 flex flex-wrap items-center justify-end gap-2">
                 <Button
                     variant="default"
                     onClick={() => router.push("/student/dashboard")}
-                    className="flex items-center gap-2"
+                    className="flex items-center justify-center gap-2 text-sm sm:text-base"
                 >
-                    <Play size={16} />
-                    Try Demo
+                    <Play size={16} className="shrink-0" />
+                    <span className="truncate">Try Demo</span>
                 </Button>
                 <Button
                     variant="outline"
                     onClick={handleLogout}
-                    className="flex items-center gap-2"
+                    className="flex items-center justify-center gap-2 text-sm sm:text-base"
                 >
                     <LogOut size={16} />
                     Logout
@@ -144,12 +144,12 @@ export default function OnboardingForm() {
 
 
 
-            <div className="w-full max-w-4xl p-8 bg-card rounded-lg shadow-sm border">
+            <div className="w-full max-w-4xl p-4 sm:p-6 md:p-8 bg-card rounded-lg shadow-sm border overflow-x-hidden">
 
-                <h1 className="text-3xl font-bold mb-2 text-foreground text-center">
+                <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 text-foreground text-center">
                     Welcome to Your Learning Journey
                 </h1>
-                <p className="text-muted-foreground text-center mb-8">
+                <p className="text-muted-foreground text-center mb-6 sm:mb-8 text-sm sm:text-base">
                     Help us personalize your experience by answering a few questions
                 </p>
 
@@ -163,21 +163,21 @@ export default function OnboardingForm() {
                 </div>
 
                 {/* Step Indicators */}
-                <div className="flex justify-between mb-8 relative">
+                <div className="flex justify-between mb-6 sm:mb-8 relative overflow-x-auto pb-2 -mx-1 scrollbar-thin">
                     {steps.map((stepItem, index) => {
                         const Icon = stepItem.icon;
                         return (
-                            <div key={index} className="flex flex-col items-center z-10">
+                            <div key={index} className="flex flex-col items-center z-10 shrink-0 min-w-[48px] sm:min-w-0">
                                 <div
-                                    className={`w-10 h-10 rounded-full flex items-center justify-center border-2 ${index <= step
+                                    className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center border-2 ${index <= step
                                             ? "bg-primary border-primary text-primary-foreground"
                                             : "bg-card border-muted text-muted-foreground"
                                         } transition-colors duration-300`}
                                 >
-                                    <Icon size={18} />
+                                    <Icon size={14} className="sm:w-[18px] sm:h-[18px]" />
                                 </div>
                                 <span
-                                    className={`text-xs mt-2 font-medium ${index <= step ? "text-primary" : "text-muted-foreground"
+                                    className={`text-[10px] sm:text-xs mt-1 sm:mt-2 font-medium text-center leading-tight max-w-[56px] sm:max-w-none ${index <= step ? "text-primary" : "text-muted-foreground"
                                         }`}
                                 >
                                     {stepItem.name}
@@ -205,10 +205,10 @@ export default function OnboardingForm() {
                         {/* Step 1: Personal Info */}
                         {step === 0 && (
                             <Card>
-                                <CardHeader>
-                                    <CardTitle className="flex items-center gap-2">
-                                        <User className="text-primary" size={24} />
-                                        Basic Personal and Academic Information
+                                <CardHeader className="px-4 sm:px-6">
+                                    <CardTitle className="flex items-start sm:items-center gap-2 text-base sm:text-lg">
+                                        <User className="text-primary shrink-0 mt-0.5 sm:mt-0" size={22} />
+                                        <span>Basic Personal and Academic Information</span>
                                     </CardTitle>
                                 </CardHeader>
                                 <CardContent className="space-y-6">
@@ -296,7 +296,7 @@ export default function OnboardingForm() {
                                     )}
                                     <div className="space-y-4">
                                         <Label>Which subjects/topics are you already comfortable with?</Label>
-                                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
                                             {["Basic Math", "Programming in Python", "Data Structures", "Algorithms", "Web Development", "Database Management", "Statistics", "Machine Learning", "UI/UX Design"].map((subject) => (
                                                 <div key={subject} className="flex items-center gap-2">
                                                     <Checkbox
@@ -317,12 +317,12 @@ export default function OnboardingForm() {
                                         {errors.proficiency && <p className="text-sm text-destructive">{errors.proficiency}</p>}
                                         <div className="space-y-4">
                                             {["Computer basics", "Internet navigation", "Mathematics", "English communication", "Programming fundamentals"].map((skill) => (
-                                                <div key={skill} className="flex items-center justify-between">
-                                                    <span className="font-medium">{skill}</span>
+                                                <div key={skill} className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4">
+                                                    <span className="font-medium text-sm sm:text-base">{skill}</span>
                                                     <RadioGroup
                                                         value={formData[`proficiency_${skill.replace(/\s+/g, '_')}`] || ""}
                                                         onValueChange={(value) => handleChange(`proficiency_${skill.replace(/\s+/g, '_')}`, value)}
-                                                        className="flex gap-2"
+                                                        className="flex flex-wrap gap-1 sm:gap-2"
                                                     >
                                                         {[1, 2, 3, 4, 5].map((num) => (
                                                             <div key={num} className="flex items-center gap-1">
@@ -802,21 +802,21 @@ export default function OnboardingForm() {
                 </AnimatePresence>
 
                 {/* Navigation */}
-                <div className={`flex ${step > 0 ? 'justify-between' : 'justify-end'} mt-8 gap-4`}>
+                <div className={`flex flex-col-reverse sm:flex-row ${step > 0 ? 'justify-between' : 'justify-end'} mt-6 sm:mt-8 gap-3 sm:gap-4`}>
                     {step > 0 && (
-                        <Button variant="outline" onClick={prevStep} className="flex items-center gap-2">
+                        <Button variant="outline" onClick={prevStep} className="flex items-center justify-center gap-2 w-full sm:w-auto">
                             <ChevronLeft size={20} />
                             Back
                         </Button>
                     )}
 
                     {step < steps.length - 1 ? (
-                        <Button onClick={nextStep} className="flex items-center gap-2 ml-auto">
+                        <Button onClick={nextStep} className="flex items-center justify-center gap-2 w-full sm:w-auto sm:ml-auto">
                             Next
                             <ChevronRight size={20} />
                         </Button>
                     ) : (
-                        <Button onClick={handleSubmit} className="flex items-center gap-2">
+                        <Button onClick={handleSubmit} className="flex items-center justify-center gap-2 w-full sm:w-auto sm:ml-auto">
                             Submit & Get Started
                             <ChevronRight size={20} />
                         </Button>
