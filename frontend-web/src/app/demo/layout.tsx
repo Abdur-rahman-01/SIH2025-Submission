@@ -13,9 +13,9 @@ import {
   Sparkles,
   LogOut,
   Bell,
-  Search,
   Sun,
-  Moon
+  Moon,
+  BookOpen
 } from "lucide-react";
 import AppUI from "@/components/logos/app_icon";
 import {
@@ -53,6 +53,11 @@ const demoNavItems = [
     title: "Dashboard",
     url: "/demo/dashboard",
     icon: LayoutDashboard,
+  },
+  {
+    title: "Browse Courses",
+    url: "/demo/browse_courses",
+    icon: BookOpen,
   },
   {
     title: "Career Map",
@@ -102,7 +107,7 @@ function DemoSidebar({ children }: { children: React.ReactNode }) {
       <Sidebar collapsible="offcanvas" className="border-r">
         <SidebarHeader className="py-4">
           <div className="flex items-center gap-3 px-2">
-            <AppUI className="w-10 h-10 select-none drag-none" />
+            <AppUI className="w-10 h-10 select-none" draggable={false} />
             <div className="flex flex-col">
               <span className="font-semibold text-sm">ShikshaDisha</span>
               <span className="text-xs text-muted-foreground">{siteConfig.version} ✦ Demo Mode</span>
@@ -131,16 +136,8 @@ function DemoSidebar({ children }: { children: React.ReactNode }) {
           </SidebarGroup>
           
           <SidebarGroup className="mt-auto">
-            <SidebarGroupLabel>Quick Links</SidebarGroupLabel>
+            <SidebarGroupLabel>Actions</SidebarGroupLabel>
             <SidebarMenu>
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild>
-                  <Link href="/demo/dashboard" className="flex items-center gap-3">
-                    <Search size={18} />
-                    <span>Browse Courses</span>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
                   <Link href="/" className="flex items-center gap-3">
@@ -153,7 +150,7 @@ function DemoSidebar({ children }: { children: React.ReactNode }) {
                 <SidebarMenuButton asChild>
                   <Link href="/auth" className="flex items-center gap-3">
                     <LogOut size={18} />
-                    <span>Logout (Get Started)</span>
+                    <span>Get Started (Sign Up)</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
@@ -162,7 +159,14 @@ function DemoSidebar({ children }: { children: React.ReactNode }) {
         </SidebarContent>
         
         <SidebarFooter className="p-4 border-t">
-          <div className="flex items-center gap-3 p-2 rounded-lg bg-muted/50">
+          <Link 
+            href="/demo/profile" 
+            className={`flex items-center gap-3 p-2 rounded-lg transition-colors ${
+              pathname === "/demo/profile" 
+                ? "bg-violet-100 dark:bg-violet-900/30 border border-violet-200 dark:border-violet-800" 
+                : "bg-muted/50 hover:bg-muted"
+            }`}
+          >
             <div className="w-10 h-10 rounded-full bg-violet-100 dark:bg-violet-900/30 flex items-center justify-center font-semibold text-sm">
               SM
             </div>
@@ -170,7 +174,7 @@ function DemoSidebar({ children }: { children: React.ReactNode }) {
               <p className="text-sm font-medium truncate">Saad Mohammed</p>
               <p className="text-xs text-muted-foreground">Level 8 • 2,450 pts</p>
             </div>
-          </div>
+          </Link>
         </SidebarFooter>
       </Sidebar>
       
