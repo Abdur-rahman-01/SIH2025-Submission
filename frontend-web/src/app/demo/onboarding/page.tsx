@@ -38,8 +38,11 @@ export default function OnboardingForm() {
         interests: [],
         learningGoals: [],
         learningTypes: [],
+        learningStyles: [],
         motivations: [],
         familiarWith: [],
+        domainStack: [],
+        backgroundExperience: [],
     });
     const router = useRouter();
 
@@ -62,17 +65,21 @@ export default function OnboardingForm() {
             const allRated = proficiencyKeys.every(key => formData[key]);
             if (!allRated) newErrors.proficiency = "Please rate all 5 foundational skills";
             if (!formData.skills?.length) newErrors.skills = "Select at least one skill you possess";
+            if (!formData.backgroundExperience?.length) newErrors.backgroundExperience = "Select at least one option";
         } else if (s === 2) {
             if (!formData.interests?.length && !formData.otherInterest?.trim()) newErrors.interests = "Select or specify at least one interest";
             if (!formData.learningGoals?.length && !formData.otherGoal?.trim()) newErrors.learningGoals = "Select or specify at least one learning goal";
             if (!formData.targetRoles?.trim()) newErrors.targetRoles = "Please specify target industries or roles";
+            if (!formData.domainStack?.length) newErrors.domainStack = "Select at least one domain/stack";
         } else if (s === 3) {
             if (!formData.learningTypes?.length) newErrors.learningTypes = "Select at least one learning type";
             if (!formData.learningStyle) newErrors.learningStyle = "Please select your learning preference";
-            if (!formData.collaborativeLearning) newErrors.collaborativeLearning = "Please select collaborative learning preference";
+            if (!formData.pacePreference) newErrors.pacePreference = "Please select your pace preference";
         } else if (s === 4) {
             if (!formData.timeCommitment) newErrors.timeCommitment = "Please select time commitment";
             if (!formData.timeline) newErrors.timeline = "Please select target timeline";
+            if (!formData.duration) newErrors.duration = "Please select preferred duration";
+            if (!formData.budgetRange) newErrors.budgetRange = "Please select budget range";
             if (!formData.motivations?.length) newErrors.motivations = "Select at least one motivation";
             if (!formData.hasResources) newErrors.hasResources = "Please select resource availability";
             if (!formData.reminders) newErrors.reminders = "Please select reminder preference";
@@ -350,6 +357,30 @@ export default function OnboardingForm() {
                                             ))}
                                         </div>
                                     </div>
+
+                                    <div className="space-y-4">
+                                        <Label>Current background experience: <span className="text-destructive">*</span></Label>
+                                        {errors.backgroundExperience && <p className="text-sm text-destructive">{errors.backgroundExperience}</p>}
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                            {[
+                                                { id: "completedCourse", label: "Completed a full programming course" },
+                                                { id: "builtWebApp", label: "Built and deployed a web app" },
+                                                { id: "workedOnProjects", label: "Worked on personal/school projects" },
+                                                { id: "noExperience", label: "No prior experience" },
+                                            ].map((exp) => (
+                                                <div key={exp.id} className="flex items-center gap-2">
+                                                    <Checkbox
+                                                        id={`exp_${exp.id}`}
+                                                        checked={formData.backgroundExperience?.includes(exp.id) || false}
+                                                        onCheckedChange={(checked) =>
+                                                            handleArrayChange("backgroundExperience", exp.id, checked as boolean)
+                                                        }
+                                                    />
+                                                    <Label htmlFor={`exp_${exp.id}`} className="text-sm cursor-pointer">{exp.label}</Label>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
                                 </CardContent>
                             </Card>
                         )}
@@ -417,6 +448,34 @@ export default function OnboardingForm() {
                                         />
                                         {errors.targetRoles && <p className="text-sm text-destructive">{errors.targetRoles}</p>}
                                     </div>
+
+                                    <div className="space-y-4">
+                                        <Label>Domain and stack (select from taxonomy): <span className="text-destructive">*</span></Label>
+                                        {errors.domainStack && <p className="text-sm text-destructive">{errors.domainStack}</p>}
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                            {[
+                                                { id: "dataSciencePython", label: "Data Science with Python" },
+                                                { id: "frontendReact", label: "Front-end with React" },
+                                                { id: "backendNode", label: "Back-end with Node.js" },
+                                                { id: "cloudAWS", label: "Cloud with AWS" },
+                                                { id: "mobileFlutter", label: "Mobile with Flutter" },
+                                                { id: "devopsDocker", label: "DevOps with Docker" },
+                                                { id: "aiML", label: "AI/ML" },
+                                                { id: "cybersecurity", label: "Cybersecurity" },
+                                            ].map((domain) => (
+                                                <div key={domain.id} className="flex items-center gap-2">
+                                                    <Checkbox
+                                                        id={`domain_${domain.id}`}
+                                                        checked={formData.domainStack?.includes(domain.id) || false}
+                                                        onCheckedChange={(checked) =>
+                                                            handleArrayChange("domainStack", domain.id, checked as boolean)
+                                                        }
+                                                    />
+                                                    <Label htmlFor={`domain_${domain.id}`} className="text-sm cursor-pointer">{domain.label}</Label>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
                                 </CardContent>
                             </Card>
                         )}
@@ -460,6 +519,53 @@ export default function OnboardingForm() {
                                                 </div>
                                             ))}
                                         </div>
+                                    </div>
+
+                                    <div className="space-y-4">
+                                        <Label>What is your learning style? <span className="text-destructive">*</span></Label>
+                                        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                                            {[
+                                                { id: "visual", label: "Visual", icon: "👁️" },
+                                                { id: "auditory", label: "Auditory", icon: "👂" },
+                                                { id: "reading", label: "Reading/Writing", icon: "📖" },
+                                                { id: "kinesthetic", label: "Kinesthetic", icon: "✋" },
+                                            ].map((style) => (
+                                                <div key={style.id} className="flex items-center gap-2">
+                                                    <Checkbox
+                                                        id={`style_${style.id}`}
+                                                        checked={formData.learningStyles?.includes(style.id) || false}
+                                                        onCheckedChange={(checked) =>
+                                                            handleArrayChange("learningStyles", style.id, checked as boolean)
+                                                        }
+                                                    />
+                                                    <Label htmlFor={`style_${style.id}`} className="cursor-pointer">{style.icon} {style.label}</Label>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <div className="space-y-4">
+                                        <Label>What is your pace and attention span? <span className="text-destructive">*</span></Label>
+                                        {errors.pacePreference && <p className="text-sm text-destructive">{errors.pacePreference}</p>}
+                                        <RadioGroup
+                                            value={formData.pacePreference || ""}
+                                            onValueChange={(value) => handleChange("pacePreference", value)}
+                                            className="grid grid-cols-1 md:grid-cols-3 gap-4"
+                                        >
+                                            {[
+                                                { id: "fast", label: "Fast learner", desc: "Can focus for extended periods" },
+                                                { id: "moderate", label: "Moderate", desc: "Regular attention span" },
+                                                { id: "slow", label: "Need more time", desc: "Prefer shorter sessions" },
+                                            ].map((option) => (
+                                                <div key={option.id} className="flex items-start gap-3 p-3 border rounded-lg hover:bg-muted/50 transition-colors">
+                                                    <RadioGroupItem value={option.id} id={option.id} />
+                                                    <div>
+                                                        <Label htmlFor={option.id} className="font-medium cursor-pointer">{option.label}</Label>
+                                                        <p className="text-sm text-muted-foreground">{option.desc}</p>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </RadioGroup>
                                     </div>
 
                                     <div className="space-y-4">
@@ -515,8 +621,57 @@ export default function OnboardingForm() {
                                             {[
                                                 { id: "less1hr", label: "<1 hour/day", desc: "Light learning" },
                                                 { id: "1-2hrs", label: "1-2 hours/day", desc: "Regular commitment" },
-                                                { id: "2-5hrs", label: "2-5 hours/week", desc: "Moderate pace" },
-                                                { id: "weekends", label: "Weekends only", desc: "Focused weekend learning" },
+                                                { id: "2-5hrs", label: "2-5 hours/day", desc: "Moderate pace" },
+                                                { id: "5plus", label: "5+ hours/day", desc: "Intensive learning" },
+                                            ].map((option) => (
+                                                <div key={option.id} className="flex items-start gap-3 p-3 border rounded-lg hover:bg-muted/50 transition-colors">
+                                                    <RadioGroupItem value={option.id} id={option.id} />
+                                                    <div>
+                                                        <Label htmlFor={option.id} className="font-medium cursor-pointer">{option.label}</Label>
+                                                        <p className="text-sm text-muted-foreground">{option.desc}</p>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </RadioGroup>
+                                    </div>
+
+                                    <div className="space-y-4">
+                                        <Label>What duration is acceptable? <span className="text-destructive">*</span></Label>
+                                        {errors.duration && <p className="text-sm text-destructive">{errors.duration}</p>}
+                                        <RadioGroup
+                                            value={formData.duration || ""}
+                                            onValueChange={(value) => handleChange("duration", value)}
+                                            className="grid grid-cols-1 md:grid-cols-3 gap-4"
+                                        >
+                                            {[
+                                                { id: "less2months", label: "<2 months", desc: "Quick intensive" },
+                                                { id: "2-6months", label: "2-6 months", desc: "Standard pace" },
+                                                { id: "more6months", label: ">6 months", desc: "Extended learning" },
+                                            ].map((option) => (
+                                                <div key={option.id} className="flex items-start gap-3 p-3 border rounded-lg hover:bg-muted/50 transition-colors">
+                                                    <RadioGroupItem value={option.id} id={option.id} />
+                                                    <div>
+                                                        <Label htmlFor={option.id} className="font-medium cursor-pointer">{option.label}</Label>
+                                                        <p className="text-sm text-muted-foreground">{option.desc}</p>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </RadioGroup>
+                                    </div>
+
+                                    <div className="space-y-4">
+                                        <Label>Budget range per month: <span className="text-destructive">*</span></Label>
+                                        {errors.budgetRange && <p className="text-sm text-destructive">{errors.budgetRange}</p>}
+                                        <RadioGroup
+                                            value={formData.budgetRange || ""}
+                                            onValueChange={(value) => handleChange("budgetRange", value)}
+                                            className="grid grid-cols-1 md:grid-cols-2 gap-4"
+                                        >
+                                            {[
+                                                { id: "free", label: "Free", desc: "No budget" },
+                                                { id: "under500", label: "Under ₹500", desc: "Budget-friendly" },
+                                                { id: "500-2000", label: "₹500-₹2000", desc: "Moderate" },
+                                                { id: "2000plus", label: "₹2000+", desc: "Premium" },
                                             ].map((option) => (
                                                 <div key={option.id} className="flex items-start gap-3 p-3 border rounded-lg hover:bg-muted/50 transition-colors">
                                                     <RadioGroupItem value={option.id} id={option.id} />
