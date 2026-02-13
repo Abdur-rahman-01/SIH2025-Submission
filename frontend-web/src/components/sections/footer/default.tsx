@@ -113,8 +113,8 @@ export default function FooterSection({
             ))}
           </FooterContent>
 
-          <FooterBottom className="flex flex-row justify-center items-center mt-6 gap-4">
-            <div className="flex items-center justify-left w-full text-xs text-muted-foreground">
+          <FooterBottom className="flex flex-col sm:flex-row justify-center items-center sm:justify-between gap-4 mt-6 pt-6 border-t">
+            <div className="flex items-center justify-center sm:justify-start w-full text-xs text-muted-foreground text-center sm:text-left">
               {copyright}
             </div>
 

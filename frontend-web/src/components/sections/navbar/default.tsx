@@ -12,7 +12,7 @@ import {
   NavbarRight,
 } from "../../ui/navbar";
 import Navigation from "../../ui/navigation";
-import { Sheet, SheetContent, SheetTrigger } from "../../ui/sheet";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "../../ui/sheet";
 
 interface NavbarLink {
   text: string;
@@ -43,11 +43,9 @@ export default function Navbar({
   logo = <AppUI />,
   name =  `${siteConfig.name}`,
   homeUrl = '/',
-  mobileLinks = [
-    { text: "Getting Started", href: '/student/onboarding' },
-  ],
+  mobileLinks = [],
   actions = [
-    { text: "Sign in", href: '/student/onboarding', isButton: false },
+    { text: "Try Demo", href: '/student/dashboard', isButton: false },
     {
       text: "Get Started",
       href: '/student/onboarding',
@@ -61,13 +59,13 @@ export default function Navbar({
 }: NavbarProps) {
   return (
     <header className={cn("fixed top-0 left-0 w-full z-50", className)}>
-      <div className="max-w-container mx-auto flex items-center justify-between px-4 py-4">
-        <NavbarComponent className="bg-violet-500/10 backdrop-blur-sm w-full flex items-center justify-between px-8 rounded-xl">
+      <div className="max-w-container mx-auto flex items-center justify-between px-3 sm:px-4 py-3 sm:py-4">
+        <NavbarComponent className="bg-violet-500/10 backdrop-blur-sm w-full flex items-center justify-between px-4 sm:px-6 md:px-8 rounded-xl">
 
           <NavbarLeft>
             <a
               href={homeUrl}
-              className="flex items-center gap-2 text-xl font-bold"
+              className="flex items-center gap-2 text-lg sm:text-xl font-bold"
             >
               {logo}
               {name}
@@ -111,11 +109,12 @@ export default function Navbar({
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right">
-              <nav className="grid gap-6 text-lg font-medium">
+            <SheetContent side="right" className="w-full max-w-[320px] sm:max-w-[360px]">
+              <SheetTitle className="sr-only">Navigation menu</SheetTitle>
+              <nav className="grid gap-4 sm:gap-6 text-base sm:text-lg font-medium">
                 <a
                   href={homeUrl}
-                  className="flex items-center gap-2 text-xl font-bold"
+                  className="flex items-center gap-2 text-xl font-bold pb-4"
                 >
                   <span>{name}</span>
                 </a>
@@ -123,11 +122,37 @@ export default function Navbar({
                   <a
                     key={index}
                     href={link.href}
-                    className="text-muted-foreground hover:text-foreground"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link.text}
                   </a>
                 ))}
+                <div className="flex flex-col gap-3">
+                  {actions.map((action, index) =>
+                    action.isButton ? (
+                      <Button
+                        key={index}
+                        variant={action.variant || "default"}
+                        className="w-full justify-center"
+                        asChild
+                      >
+                        <a href={action.href}>
+                          {action.icon}
+                          {action.text}
+                          {action.iconRight}
+                        </a>
+                      </Button>
+                    ) : (
+                      <a
+                        key={index}
+                        href={action.href}
+                        className="lg:text-muted-foreground hover:text-foreground transition-colors text-white py-2"
+                      >
+                        {action.text}
+                      </a>
+                    )
+                  )}
+                </div>
               </nav>
             </SheetContent>
           </Sheet>

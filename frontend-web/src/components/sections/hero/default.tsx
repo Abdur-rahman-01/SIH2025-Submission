@@ -50,6 +50,11 @@ export default function Hero({
       variant: "default",
     },
     {
+      href: '/student/dashboard',
+      text: "Try Demo",
+      variant: "outline",
+    },
+    {
       href: siteConfig.links.github,
       text: "GitHub",
       variant: "glow",
@@ -65,7 +70,7 @@ export default function Hero({
         className,
       )}
     >
-      <div className="max-w-container mx-auto flex flex-col gap-12 pt-32 md:pt-16 sm:gap-24">
+      <div className="max-w-container mx-auto flex flex-col gap-8 sm:gap-12 md:gap-16 lg:gap-24 pt-24 sm:pt-28 md:pt-32 px-4 sm:px-6">
 
         <div className="flex flex-col items-center gap-6 text-center sm:gap-12">
 
@@ -74,11 +79,11 @@ export default function Hero({
           <h1 className="animate-appear from-foreground to-foreground dark:to-muted-foreground relative z-10 inline-block bg-linear-to-r bg-clip-text text-3xl leading-tight font-semibold text-balance text-transparent drop-shadow-2xl sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
             {title}
           </h1>
-          <p className="text-lg animate-appear text-muted-foreground relative z-10 max-w-[840px] font-medium text-balance opacity-0 delay-100 sm:text-2xl">
+          <p className="text-base sm:text-lg md:text-xl animate-appear text-muted-foreground relative z-10 max-w-[840px] font-medium text-balance opacity-0 delay-100 px-2">
             {description}
           </p>
           {buttons !== false && buttons.length > 0 && (
-            <div className="animate-appear relative z-10 flex justify-center gap-4 opacity-0 delay-300">
+            <div className="animate-appear relative z-10 flex flex-wrap justify-center gap-3 sm:gap-4 opacity-0 delay-300">
               {buttons.map((button, index) => (
                 <Button
                   key={index}

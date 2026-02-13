@@ -89,20 +89,20 @@ export default function Dashboard() {
     }, []);
 
     return (
-        <div className="min-h-screen bg-background p-18">
+        <div className="min-h-screen bg-background pt-24 sm:pt-28 px-4 sm:px-6 lg:px-8 pb-12">
             {/* Header */}
             <div className="max-w-7xl mx-auto">
-                <div className="flex justify-between items-center mb-8">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6 sm:mb-8">
                     <div>
-                        <h1 className="text-3xl font-bold text-foreground">Career GPS</h1>
-                        <p className="text-muted-foreground">Your personalized learning journey</p>
+                        <h1 className="text-2xl sm:text-3xl font-bold text-foreground">Career GPS</h1>
+                        <p className="text-sm sm:text-base text-muted-foreground">Your personalized learning journey</p>
                     </div>
-                    <div className="flex items-center gap-4">
-                        <div className="text-right">
-                            <p className="font-medium text-foreground">Welcome back, {userData.name}!</p>
+                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+                        <div className="text-left sm:text-right">
+                            <p className="font-medium text-foreground truncate">Welcome back, {userData.name}!</p>
                             <p className="text-sm text-muted-foreground">{userData.careerGoal} Path</p>
                         </div>
-                        <Button variant="outline" onClick={handleLogout} className="flex items-center gap-2">
+                        <Button variant="outline" onClick={handleLogout} className="flex items-center justify-center gap-2 shrink-0">
                             <LogOut size={16} />
                             Logout
                         </Button>
@@ -135,22 +135,22 @@ export default function Dashboard() {
                                             <span className="text-sm font-medium">{userData.progress}%</span>
                                         </div>
                                         <Progress value={userData.progress} className="h-3" />
-                                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-                                            <div className="text-center p-4 border rounded-lg">
-                                                <div className="text-2xl font-bold text-primary">2</div>
-                                                <div className="text-sm text-muted-foreground">Courses Completed</div>
+                                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-6">
+                                            <div className="text-center p-3 sm:p-4 border rounded-lg">
+                                                <div className="text-xl sm:text-2xl font-bold text-primary">2</div>
+                                                <div className="text-xs sm:text-sm text-muted-foreground">Courses Completed</div>
                                             </div>
-                                            <div className="text-center p-4 border rounded-lg">
-                                                <div className="text-2xl font-bold text-primary">5</div>
-                                                <div className="text-sm text-muted-foreground">Skills Gained</div>
+                                            <div className="text-center p-3 sm:p-4 border rounded-lg">
+                                                <div className="text-xl sm:text-2xl font-bold text-primary">5</div>
+                                                <div className="text-xs sm:text-sm text-muted-foreground">Skills Gained</div>
                                             </div>
-                                            <div className="text-center p-4 border rounded-lg">
-                                                <div className="text-2xl font-bold text-primary">12</div>
-                                                <div className="text-sm text-muted-foreground">Weeks Remaining</div>
+                                            <div className="text-center p-3 sm:p-4 border rounded-lg">
+                                                <div className="text-xl sm:text-2xl font-bold text-primary">12</div>
+                                                <div className="text-xs sm:text-sm text-muted-foreground">Weeks Remaining</div>
                                             </div>
-                                            <div className="text-center p-4 border rounded-lg">
-                                                <div className="text-2xl font-bold text-primary">85%</div>
-                                                <div className="text-sm text-muted-foreground">Path Match</div>
+                                            <div className="text-center p-3 sm:p-4 border rounded-lg">
+                                                <div className="text-xl sm:text-2xl font-bold text-primary">85%</div>
+                                                <div className="text-xs sm:text-sm text-muted-foreground">Path Match</div>
                                             </div>
                                         </div>
 
@@ -192,22 +192,22 @@ export default function Dashboard() {
                                             <span className="text-sm font-medium">{userData.progress}%</span>
                                         </div>
                                         <Progress value={userData.progress} className="h-3" />
-                                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-                                            <div className="text-center p-4 border rounded-lg">
-                                                <div className="text-2xl font-bold text-primary">2</div>
-                                                <div className="text-sm text-muted-foreground">Courses Completed</div>
+                                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-6">
+                                            <div className="text-center p-3 sm:p-4 border rounded-lg">
+                                                <div className="text-xl sm:text-2xl font-bold text-primary">2</div>
+                                                <div className="text-xs sm:text-sm text-muted-foreground">Courses Completed</div>
                                             </div>
-                                            <div className="text-center p-4 border rounded-lg">
-                                                <div className="text-2xl font-bold text-primary">5</div>
-                                                <div className="text-sm text-muted-foreground">Skills Gained</div>
+                                            <div className="text-center p-3 sm:p-4 border rounded-lg">
+                                                <div className="text-xl sm:text-2xl font-bold text-primary">5</div>
+                                                <div className="text-xs sm:text-sm text-muted-foreground">Skills Gained</div>
                                             </div>
-                                            <div className="text-center p-4 border rounded-lg">
-                                                <div className="text-2xl font-bold text-primary">12</div>
-                                                <div className="text-sm text-muted-foreground">Weeks Remaining</div>
+                                            <div className="text-center p-3 sm:p-4 border rounded-lg">
+                                                <div className="text-xl sm:text-2xl font-bold text-primary">12</div>
+                                                <div className="text-xs sm:text-sm text-muted-foreground">Weeks Remaining</div>
                                             </div>
-                                            <div className="text-center p-4 border rounded-lg">
-                                                <div className="text-2xl font-bold text-primary">85%</div>
-                                                <div className="text-sm text-muted-foreground">Path Match</div>
+                                            <div className="text-center p-3 sm:p-4 border rounded-lg">
+                                                <div className="text-xl sm:text-2xl font-bold text-primary">85%</div>
+                                                <div className="text-xs sm:text-sm text-muted-foreground">Path Match</div>
                                             </div>
                                         </div>
                                     </div>
@@ -282,7 +282,7 @@ export default function Dashboard() {
                     </div>
 
                     {/* Sidebar - 1/3 width */}
-                    <div className="space-y-6">
+                    <div className="space-y-4 sm:space-y-6 min-w-0 lg:sticky lg:top-24 lg:self-start">
                         {/* Career Journey Map */}
                         <motion.div
                             initial={{ opacity: 0, x: 20 }}
@@ -302,7 +302,7 @@ export default function Dashboard() {
                                 <CardContent>
                                     <div className="space-y-4">
                                         {milestones.map((milestone, index) => (
-                                            <div key={milestone.id} className="flex items-start gap-3">
+                                            <div key={milestone.id} className="flex items-start gap-3 min-w-0">
                                                 <div className={`flex flex-col items-center ${milestone.status === "completed" ? "text-primary" :
                                                     milestone.status === "current" ? "text-green-500" : "text-muted-foreground"
                                                     }`}>
@@ -317,12 +317,12 @@ export default function Dashboard() {
                                                             }`} />
                                                     )}
                                                 </div>
-                                                <div className="flex-1 pb-4">
-                                                    <h3 className={`font-medium ${milestone.status === "current" ? "text-green-600" : "text-foreground"
+                                                <div className="flex-1 pb-4 min-w-0">
+                                                    <h3 className={`font-medium truncate ${milestone.status === "current" ? "text-green-600 dark:text-green-400" : "text-foreground"
                                                         }`}>
                                                         {milestone.title}
                                                     </h3>
-                                                    <p className="text-sm text-muted-foreground">{milestone.description}</p>
+                                                    <p className="text-sm text-muted-foreground line-clamp-2">{milestone.description}</p>
                                                 </div>
                                             </div>
                                         ))}
@@ -377,26 +377,26 @@ export default function Dashboard() {
                                     <CardTitle className="text-lg">Market Insights</CardTitle>
                                 </CardHeader>
                                 <CardContent className="space-y-3">
-                                    <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
-                                        <div>
-                                            <p className="font-medium text-green-800">High Demand</p>
-                                            <p className="text-sm text-green-600">Web Developers</p>
+                                    <div className="flex items-center justify-between gap-3 p-3 bg-green-50 dark:bg-green-950/30 rounded-lg min-w-0">
+                                        <div className="min-w-0">
+                                            <p className="font-medium text-green-800 dark:text-green-300">High Demand</p>
+                                            <p className="text-sm text-green-600 dark:text-green-400 truncate">Web Developers</p>
                                         </div>
-                                        <TrendingUp className="text-green-600" size={20} />
+                                        <TrendingUp className="text-green-600 dark:text-green-400 shrink-0" size={20} />
                                     </div>
-                                    <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
-                                        <div>
-                                            <p className="font-medium text-blue-800">Growing Field</p>
-                                            <p className="text-sm text-blue-600">AI & ML Jobs</p>
+                                    <div className="flex items-center justify-between gap-3 p-3 bg-blue-50 dark:bg-blue-950/30 rounded-lg min-w-0">
+                                        <div className="min-w-0">
+                                            <p className="font-medium text-blue-800 dark:text-blue-300">Growing Field</p>
+                                            <p className="text-sm text-blue-600 dark:text-blue-400 truncate">AI & ML Jobs</p>
                                         </div>
-                                        <Users className="text-blue-600" size={20} />
+                                        <Users className="text-blue-600 dark:text-blue-400 shrink-0" size={20} />
                                     </div>
-                                    <div className="flex items-center justify-between p-3 bg-orange-50 rounded-lg">
-                                        <div>
-                                            <p className="font-medium text-orange-800">New Opportunity</p>
-                                            <p className="text-sm text-orange-600">Cloud Computing</p>
+                                    <div className="flex items-center justify-between gap-3 p-3 bg-orange-50 dark:bg-orange-950/30 rounded-lg min-w-0">
+                                        <div className="min-w-0">
+                                            <p className="font-medium text-orange-800 dark:text-orange-300">New Opportunity</p>
+                                            <p className="text-sm text-orange-600 dark:text-orange-400 truncate">Cloud Computing</p>
                                         </div>
-                                        <Briefcase className="text-orange-600" size={20} />
+                                        <Briefcase className="text-orange-600 dark:text-orange-400 shrink-0" size={20} />
                                     </div>
                                 </CardContent>
                             </Card>
