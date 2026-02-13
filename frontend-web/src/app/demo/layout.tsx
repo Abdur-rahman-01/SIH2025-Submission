@@ -3,6 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTheme } from "next-themes";
 import {
   LayoutDashboard,
   MapPin,
@@ -11,9 +12,10 @@ import {
   BarChart3,
   Sparkles,
   LogOut,
-  Settings,
   Bell,
-  Search
+  Search,
+  Sun,
+  Moon
 } from "lucide-react";
 import AppUI from "@/components/logos/app_icon";
 import {
@@ -31,6 +33,20 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { siteConfig } from "@/config/site";
 
 const demoNavItems = [
   {
@@ -75,20 +91,21 @@ export default function DemoLayout({
 
 function DemoSidebar({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+  const { setTheme } = useTheme();
 
   if (pathname === "/demo/onboarding") {
     return <>{children}</>;
   }
 
   return (
-    <SidebarProvider defaultOpen={true}>
+    <SidebarProvider defaultOpen={true} className="h-screen">
       <Sidebar collapsible="offcanvas" className="border-r">
         <SidebarHeader className="py-4">
           <div className="flex items-center gap-3 px-2">
-            <AppUI className="w-10 h-10" />
+            <AppUI className="w-10 h-10 select-none drag-none" />
             <div className="flex flex-col">
               <span className="font-semibold text-sm">ShikshaDisha</span>
-              <span className="text-xs text-muted-foreground">Demo Mode</span>
+              <span className="text-xs text-muted-foreground">{siteConfig.version} ✦ Demo Mode</span>
             </div>
           </div>
         </SidebarHeader>
@@ -128,7 +145,15 @@ function DemoSidebar({ children }: { children: React.ReactNode }) {
                 <SidebarMenuButton asChild>
                   <Link href="/" className="flex items-center gap-3">
                     <LogOut size={18} />
-                    <span>Logout (Exit Demo)</span>
+                    <span>Logout (Go to Home)</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link href="/auth" className="flex items-center gap-3">
+                    <LogOut size={18} />
+                    <span>Logout (Get Started)</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
@@ -149,7 +174,7 @@ function DemoSidebar({ children }: { children: React.ReactNode }) {
         </SidebarFooter>
       </Sidebar>
       
-      <SidebarInset>
+      <SidebarInset className="flex flex-col flex-1 h-full overflow-auto">
         <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4 sticky top-0 z-10 bg-background/80 backdrop-blur-md">
           <SidebarTrigger />
           <div className="flex-1">
@@ -158,12 +183,60 @@ function DemoSidebar({ children }: { children: React.ReactNode }) {
             </h1>
           </div>
           <div className="flex items-center gap-2">
-            <Button variant="ghost" size="icon">
-              <Bell size={18} />
-            </Button>
-            <Button variant="ghost" size="icon">
-              <Settings size={18} />
-            </Button>
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Bell size={18} />
+                </Button>
+              </SheetTrigger>
+              <SheetContent>
+                <SheetHeader>
+                  <SheetTitle>Notifications</SheetTitle>
+                </SheetHeader>
+                <div className="flex flex-col gap-4 mt-4">
+                  <div className="flex gap-3 p-3 rounded-lg border">
+                    <div className="w-10 h-10 rounded-full bg-violet-100 dark:bg-violet-900/30 flex items-center justify-center">
+                      <Trophy className="w-5 h-5 text-violet-500" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-sm font-medium">Achievement Unlocked!</p>
+                      <p className="text-xs text-muted-foreground">You earned the "Fast Learner" badge</p>
+                      <p className="text-xs text-muted-foreground mt-1">2 hours ago</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-3 p-3 rounded-lg border">
+                    <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+                      <MessageSquare className="w-5 h-5 text-blue-500" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-sm font-medium">New message from AI Companion</p>
+                      <p className="text-xs text-muted-foreground">Check out your career recommendations</p>
+                      <p className="text-xs text-muted-foreground mt-1">5 hours ago</p>
+                    </div>
+                  </div>
+                </div>
+              </SheetContent>
+            </Sheet>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="icon" className="relative">
+                  <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                  <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                  <span className="sr-only">Toggle theme</span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem onClick={() => setTheme("light")}>
+                  Light
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setTheme("dark")}>
+                  Dark
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setTheme("system")}>
+                  System
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </header>
         <div className="flex flex-1 flex-col">
