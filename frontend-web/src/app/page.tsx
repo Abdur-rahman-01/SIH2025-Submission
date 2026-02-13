@@ -35,7 +35,7 @@ export default function Home() {
           glowColor="145, 60, 255"
           disableAnimations={false}
         />
-        {/* <LearningEfficiency /> */}
+        <LearningEfficiency />
         {/* <Stats /> */}
         {/* <Pricing /> */}
         <FAQ />
