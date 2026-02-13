@@ -43,12 +43,9 @@ export default function Navbar({
   logo = <LaunchUI />,
   name = "ShikshaDisha",
   homeUrl = '/',
-  mobileLinks = [
-    { text: "Getting Started", href: '/student/onboarding' },
-  ],
+  mobileLinks = [],
   actions = [
     { text: "Try Demo", href: '/student/dashboard', isButton: false },
-    { text: "Sign in", href: '/student/onboarding', isButton: false },
     {
       text: "Get Started",
       href: '/student/onboarding',
@@ -117,7 +114,7 @@ export default function Navbar({
               <nav className="grid gap-4 sm:gap-6 text-base sm:text-lg font-medium">
                 <a
                   href={homeUrl}
-                  className="flex items-center gap-2 text-xl font-bold pb-4 border-b"
+                  className="flex items-center gap-2 text-xl font-bold pb-4"
                 >
                   <span>{name}</span>
                 </a>
@@ -130,7 +127,7 @@ export default function Navbar({
                     {link.text}
                   </a>
                 ))}
-                <div className="pt-4 border-t flex flex-col gap-3">
+                <div className="flex flex-col gap-3">
                   {actions.map((action, index) =>
                     action.isButton ? (
                       <Button
@@ -149,7 +146,7 @@ export default function Navbar({
                       <a
                         key={index}
                         href={action.href}
-                        className="text-muted-foreground hover:text-foreground transition-colors py-2"
+                        className="lg:text-muted-foreground hover:text-foreground transition-colors text-white py-2"
                       >
                         {action.text}
                       </a>
