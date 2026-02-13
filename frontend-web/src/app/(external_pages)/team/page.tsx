@@ -36,7 +36,7 @@ const teamMembers = [
 export default function Team() {
   return (
     <>
-      <main className="min-h-screen w-full overflow-hidden bg-background text-foreground">
+      <main className="min-h-screen w-full overflow-hidden bg-gradient-to-r from-primary/5 via-transparent to-primary/5 text-foreground">
 
         <Navbar />
 
