@@ -519,7 +519,7 @@ const MagicBento = ({
   const shouldDisableAnimations = disableAnimations || isMobile;
 
   return (
-    <section className="relative py-20 overflow-hidden px-4">
+    <section className="relative py-20 overflow-hidden px-4 z-10">
       <div className="absolute inset-0">
         <motion.div
           className="absolute top-20 left-10 h-24 w-24 rounded-full bg-primary/20 dark:bg-primary/15 blur-xl"
@@ -564,12 +564,23 @@ const MagicBento = ({
       </div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="scroll-m-20 text-3xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary via-foreground to-primary transition-all duration-300 hover:scale-105 hover:bg-gradient-to-l animate-gradient leading-[1.2] sm:text-5xl md:text-6xl lg:text-7xl">
+          <motion.h1 
+            className="scroll-m-20 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[oklch(0.55_0.18_290)] via-[oklch(0.65_0.16_290)] to-[oklch(0.55_0.18_290)] animate-gradient-x leading-[1.1] transition-transform duration-300 hover:scale-105 cursor-default"
+            initial={{ opacity: 0, y: 20 }}
+            whileHover={{ scale: 1.02 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
               Why Choose ShikshaDisha?
-          </h1>
-          <p className="text-muted-foreground max-w-2xl mx-auto py-8 sm:text-1xl md:text-2xl lg:text-3xl">
+          </motion.h1>
+          <motion.p 
+            className="text-muted-foreground max-w-2xl mx-auto mt-6 sm:text-1xl md:text-2xl lg:text-3xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
             AI-powered tools designed to transform your career journey with personalized learning paths!
-          </p>
+          </motion.p>
         </div>
       </div>
       {enableSpotlight && (
