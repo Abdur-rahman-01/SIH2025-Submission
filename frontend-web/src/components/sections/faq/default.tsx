@@ -1,7 +1,4 @@
-import Link from "next/link";
 import { ReactNode } from "react";
-
-import { siteConfig } from "@/config/site";
 
 import {
   Accordion,
@@ -28,80 +25,100 @@ export default function FAQ({
   items = [
     {
       question:
-        "What is the purpose of this AI-powered learning path generator?",
+        "What is ShikshaDisha?",
       answer: (
         <>
           <p className="text-muted-foreground mb-4 max-w-[640px] text-balance">
-            It helps learners discover personalized vocational training paths aligned to their background, skills, and career goals, dynamically updating as they progress or job market demands change.
+            ShikshaDisha is an AI-powered platform that generates personalized vocational training roadmaps, connecting learners with NSQF-aligned courses tailored to their background, skills, and career aspirations.
           </p>
         </>
       ),
     },
     {
-      question: "How does the system create personalized learning paths?",
+      question: "How does ShikshaDisha personalize learning paths?",
       answer: (
         <>
           <p className="text-muted-foreground mb-4 max-w-[600px]">
-            Using AI/ML, it analyzes learner profiles including education, skills, social context, and aspirations, then matches requirements with NSQF-aligned courses and industry needs.
+            Our AI analyzes your education, existing skills, social context, and career goals to create a dynamic learning roadmap that adapts as you progress or as job market demands evolve.
           </p>
         </>
       ),
     },
     {
       question:
-        "Who can use this platform?",
+        "What is NSQF alignment and why does it matter?",
       answer: (
         <>
           <p className="text-muted-foreground mb-4 max-w-[580px]">
-            Learners seeking career guidance, trainers monitoring learner progress, and policymakers tracking skill demand and training outcomes.
+            NSQF (National Skills Qualification Framework) ensures standardized competency levels across vocational training. All recommended courses are NSQF-aligned, making your credentials recognized and valued by employers nationwide.
           </p>
         </>
       ),
     },
     {
-      question: 'Is this platform accessible in multiple languages?',
+      question: 'Does ShikshaDisha support multiple languages?',
       answer: (
         <>
           <p className="text-muted-foreground mb-4 max-w-[580px]">
-            Yes, it supports several Indian languages with simple, inclusive UI designed for easy mobile use.
+            Yes! The platform supports several Indian languages including Hindi, English, Tamil, Telugu, Bengali, and more, with an inclusive UI designed for seamless mobile usage.
           </p>
         </>
       ),
     },
     {
-      question: "How does the platform ensure alignment with current job market needs?",
+      question: "How does the platform track real-time job market trends?",
       answer: (
         <p className="text-muted-foreground mb-4 max-w-[580px]">
-          It continuously integrates real-time labor market data to adjust course and skill recommendations.
+          ShikshaDisha integrates labor market data APIs and industry partnership feeds to continuously update skill demand forecasts, ensuring your learning path remains relevant to current job opportunities.
         </p>
       ),
     },
     {
-      question: "What types of training and credentials are recommended?",
+      question: "What types of training and credentials are available?",
       answer: (
         <>
           <p className="text-muted-foreground mb-4 max-w-[580px]">
-            Vocational courses, micro-credentials, certifications, internships, apprenticeships, and on-the-job training opportunities.
+            We recommend vocational courses, micro-credentials, industry certifications, internships, apprenticeships, and on-the-job training opportunities—all mapped to specific career outcomes.
           </p>
         </>
       ),
     },
     {
-      question: "Can trainers and policymakers access learner progress and skill demand data?",
+      question: "Who can benefit from ShikshaDisha?",
       answer: (
         <>
           <p className="text-muted-foreground mb-4 max-w-[580px]">
-            Yes, dedicated dashboards provide progress insights for trainers and demand-supply analytics for policymakers.
+            <strong>Learners:</strong> Get personalized career guidance | <strong>Trainers:</strong> Monitor learner progress | <strong>Policymakers:</strong> Access skill demand analytics and training outcome insights.
           </p>
         </>
       ),
     },
     {
-      question: "Is this solution scalable to handle millions of learners?",
+      question: "Is the platform scalable for nationwide implementation?",
       answer: (
         <>
           <p className="text-muted-foreground mb-4 max-w-[580px]">
-            The system is designed with scalable architecture to manage large user volumes efficiently.
+            Absolutely. Built with cloud-native scalable architecture, ShikshaDisha can handle millions of concurrent users while maintaining fast response times and data integrity.
+          </p>
+        </>
+      ),
+    },
+    {
+      question: "How does the AI improve recommendations over time?",
+      answer: (
+        <>
+          <p className="text-muted-foreground mb-4 max-w-[580px]">
+            The system learns from your interactions—course views, completion rates, quiz performance, and career goal updates—to progressively refine its recommendations, increasing relevance and reducing your search time.
+          </p>
+        </>
+      ),
+    },
+    {
+      question: "What makes ShikshaDisha different from other learning platforms?",
+      answer: (
+        <>
+          <p className="text-muted-foreground mb-4 max-w-[580px]">
+            Unlike generic course aggregators, ShikshaDisha combines behavioral AI analysis, NSQF skill mapping, labor market intelligence, and multi-stakeholder dashboards to deliver truly personalized career transformation pathways.
           </p>
         </>
       ),
